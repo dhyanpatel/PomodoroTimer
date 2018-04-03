@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Dhyan's Pomodoro Timer</title>
+</head>
+<body>
+<div style = "clear: both">
+<h1 id = "minutes"></h1><h1>:</h1><h1 id = "seconds"></h1>
+<script>
+var myVar = setInterval(Timer, 1000);
+var work = 1200 //seconds
+function Timer(seconds){
+	document.getElementById("minutes").innerHTML = Math.floor(work/60)
+	document.getElementById("seconds").innerHTML = work%60
+	work = work - 1
+}
+</script>
+
+</body>
+</html>
