@@ -1,6 +1,6 @@
 var myVar;
 function startClock(){
-	myVar = setInterval(timer, 1)
+	myVar = setInterval(timer, 1000)
 }
 
 const times = [1200, 300, 1200, 300, 1200, 900]
@@ -19,8 +19,7 @@ function timer(){
 			else{
 				step++
 			}
-			seconds = times[step]
-			stopTimer()
+			resetTimer()
 		}
 }
 
