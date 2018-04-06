@@ -9,6 +9,7 @@ var step = 0
 var seconds = times[step]
 
 function timer(){
+		document.body.style.backgroundColor = "lightgreen"
 		document.getElementById("minutes").innerHTML = Math.floor(seconds/60)
 		document.getElementById("seconds").innerHTML = seconds%60
 		seconds--
@@ -24,10 +25,12 @@ function timer(){
 }
 
 function pauseTimer(){
+	document.body.style.backgroundColor = "lightblue"
 	clearInterval(myVar)
 }
 
 function resetTimer(){
+	document.body.style.backgroundColor = "red"
 	clearInterval(myVar)
 	seconds = times[step]
 	document.getElementById("minutes").innerHTML = Math.floor(seconds/60)
