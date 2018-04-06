@@ -1,5 +1,6 @@
 var myVar;
 function startClock(){
+	clearInterval(myVar)
 	myVar = setInterval(timer, 1000)
 }
 
