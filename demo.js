@@ -1,5 +1,5 @@
 function startClock(){
-	var myVar = setInterval(timer, 1000)
+	var myVar = setInterval(timer, 1)
 }
 
 const times = [1200, 300, 1200, 300, 1200, 900]
