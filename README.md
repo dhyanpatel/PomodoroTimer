@@ -5,5 +5,5 @@ Basic HTML/CSS/JS Pomodoro Timer. Will use Cordova to publish as app on Play Sto
 # To Do:
 - ~~Include Stop/Pause Button~~
 - ~~Style Buttons~~
-- Style background to reflect current state of timer
+- ~~Style background to reflect current state of Timer~~
 - Use Cordova to turn into app --> Put on Play Store
