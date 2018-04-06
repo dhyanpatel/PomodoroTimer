@@ -1,6 +1,6 @@
 var myVar;
 function startClock(){
-	myVar = setInterval(timer, 1000)
+	myVar = setInterval(timer, 1)
 }
 
 const times = [1200, 300, 1200, 300, 1200, 900]
@@ -20,6 +20,7 @@ function timer(){
 				step++
 			}
 			seconds = times[step]
+			stopTimer()
 		}
 }
 
@@ -27,7 +28,7 @@ function pauseTimer(){
 	clearInterval(myVar)
 }
 
-function stopTimer(){
+function resetTimer(){
 	clearInterval(myVar)
 	seconds = times[step]
 	document.getElementById("minutes").innerHTML = Math.floor(seconds/60)
