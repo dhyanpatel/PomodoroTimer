@@ -5,6 +5,7 @@ function startClock(){
 }
 
 const times = [1200, 300, 1200, 300, 1200, 900]
+const statuses = ["Work", "Break", "Work", "Break", "Work", "Extended Break"]
 
 var step = 0
 var seconds = times[step]
@@ -21,7 +22,7 @@ function timer(){
 			else{
 				step++
 			}
-			resetTimer()
+			moveTimer()
 		}
 }
 
@@ -30,10 +31,21 @@ function pauseTimer(){
 	clearInterval(myVar)
 }
 
-function resetTimer(){
+function moveTimer(){
+	document.getElementById("status").innerHTML = statuses[step]
 	document.body.style.backgroundColor = "red"
 	clearInterval(myVar)
 	seconds = times[step]
+	document.getElementById("minutes").innerHTML = Math.floor(seconds/60)
+	document.getElementById("seconds").innerHTML = seconds%60
+}
+
+function resetTimer(){
+	document.body.style.backgroundColor = "red"
+	clearInterval(myVar)
+	step = 0
+	seconds = times[step]
+	document.getElementById("status").innerHTML = statuses[step]
 	document.getElementById("minutes").innerHTML = Math.floor(seconds/60)
 	document.getElementById("seconds").innerHTML = seconds%60
 }
